@@ -10,8 +10,10 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./tema.component.css']
 })
 export class TemaComponent implements OnInit {
+
 tema: Tema = new Tema()
 listaTemas: Tema[]
+
   constructor(
     private temaService: TemaService,
     private router: Router

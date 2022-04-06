@@ -14,6 +14,9 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { TemaComponent } from './tema/tema.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     TemaComponent,
     TemaEditComponent,
     TemaDeleteComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent,
+    UsuarioEditComponent,
     
   ],
   imports: [
