@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -18,7 +19,8 @@ export class UsuarioEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
 
     ) { }
   
@@ -41,14 +43,14 @@ export class UsuarioEditComponent implements OnInit {
   atualizar(){
     if(this.usuario.senha != this.confirmarSenha){
 
-      alert("Sua senha precisa ser igual")
+      this.alertas.showAlertDanger("Sua senha precisa ser igual")
     }
     else{
       
-      this.authService.cadastrar(this.usuario).subscribe((resp:Usuario) => {
+      this.authService.atualizar(this.usuario).subscribe((resp:Usuario) => {
         this.usuario = resp
         this.router.navigate(['/home'])
-        alert("Usuario atualizado com sucesso, faça o login novamente.")
+        this.alertas.showAlertInfo("Usuario atualizado com sucesso, faça o login novamente.")
         environment.token =''
         environment.nome =''
         environment.foto =''
