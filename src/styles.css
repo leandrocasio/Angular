@@ -4,9 +4,30 @@ html {
   }
 
 .fs-54{
-    font-size: 54pt;
+    font-size: 40pt;
+    font-family: 'Holtwood One SC', serif;
+    color: rgb(2, 255, 2);
 }
 .fs-18{
     font-size: 18pt;
+    font-family: 'Holtwood One SC', serif;
+    color: rgb(0, 255, 0);
 }
 
+.fs-30{
+    font-size: 30pt;
+    font-family: 'Holtwood One SC', serif;
+    color: rgb(206, 77, 17);
+}
+
+.fs-15{
+    font-size: 15pt;
+    font-family: 'Holtwood One SC', serif;
+    color: rgb(206, 77, 17);
+}
+
+.fs-10{
+    font-size: 12pt;
+    font-family: 'Holtwood One SC', serif;
+    color: rgb(0, 0, 0);
+}
